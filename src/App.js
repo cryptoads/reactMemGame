@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Link, Route, Switch } from 'react-router-dom'; 
 import MemoryGame from './MemoryGame.js';
-import Ajax from './Ajax.js';
+import Jobs from './Jobs.js';
 
 
 class App extends Component {
@@ -15,12 +15,12 @@ render(){
         <div>
         <div className="navbar">
             <Link to="/memory">Memory Game</Link>
-            <Link to="/ajax">Ajax</Link>
+            <Link to="/jobs">Job Search</Link>
         </div>
         <Switch>
             <Route exact path="/" component={MemoryGame} />
             <Route path="/memory" component={MemoryGame} />
-            <Route path="/ajax" component={Ajax} />
+            <Route path="/jobs" component={Jobs} />
         </Switch>
         </div>
         )
