@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './Jobs.css';
 import JobsListItem from './JobsListItem.js';
 import axios from 'axios';
+import Job from './Job.js';
+import { Switch, Route } from 'react-router-dom';
 
 
 
@@ -26,7 +28,7 @@ class Jobs extends Component {
             <p className="App-subtitle"> click to explore jobs</p>
             </header>
             </div>
-            <div className="Jobs">{jobsJSX}</div>
+            <div className="Jobs"><Switch><Route exact path="/jobs" render={ () => jobsJSX} /> <Route path="/jobs/:id" component={Job} /> </Switch></div>
             </div>
             );
     }
